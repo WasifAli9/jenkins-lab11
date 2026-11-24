@@ -64,8 +64,7 @@ pipeline {
             }
             post {
                 always {
-                    junit 'test-results.xml'
-                    archiveArtifacts artifacts: 'screenshot.png', allowEmptyArchive: true
+                    archiveArtifacts artifacts: 'test-results.xml,screenshot.png', allowEmptyArchive: true
                 }
             }
         }
